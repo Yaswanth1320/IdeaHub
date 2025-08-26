@@ -1,4 +1,4 @@
-# Top20
+# IdeaHub
 
 <div align="center">
   <div>
