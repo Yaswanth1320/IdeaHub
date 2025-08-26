@@ -11,12 +11,13 @@ type Idea = {
   id: number;
   title: string;
   description: string;
-  category?: string;
+  category: string | null; // ✅ allow null
   authorName: string;
+  authorEmail: string;
   authorImage: string;
-  likeCount?: number;
-  dislikeCount?: number;
-  createdAt?: string;
+  createdAt: Date;
+  likeCount: number;
+  dislikeCount: number;
 };
 
 const LeaderBoard = () => {
