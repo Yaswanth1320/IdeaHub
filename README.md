@@ -69,7 +69,7 @@ Top20 provides a smooth and interactive user experience for startups and innovat
 ### 📁 Clone the Repo
 
 ```bash
-git clone https://github.com/Yaswanth1320/top20.git
+git clone https://github.com/Yaswanth1320/IdeaHub.git
 cd top20
 ```
 
