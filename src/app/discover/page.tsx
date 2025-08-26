@@ -144,7 +144,7 @@ const Discover = () => {
           ...prev,
           [ideaId]: ideaComments.map((c) => ({
             ...c,
-            createdAt: c.createdAt.toISOString(), // convert Date -> string
+            createdAt: new Date(c.createdAt), // convert string -> Date
           })),
         }));
       } catch (err) {
