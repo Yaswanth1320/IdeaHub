@@ -37,10 +37,10 @@ type Comment = {
   id: number;
   content: string;
   userClerkId: string;
-  createdAt: string;
   authorName: string;
   authorEmail: string;
   authorImage: string;
+  createdAt: Date; // Date type!
 };
 
 type Idea = {
@@ -144,7 +144,7 @@ const Discover = () => {
           ...prev,
           [ideaId]: ideaComments.map((c) => ({
             ...c,
-            authorImage: safeImageUrl(c.authorImage),
+            createdAt: c.createdAt.toISOString(), // convert Date -> string
           })),
         }));
       } catch (err) {
@@ -362,7 +362,7 @@ const Discover = () => {
                                   {c.authorName}
                                 </p>
                                 <p className="text-[10px] text-gray-400 whitespace-nowrap ml-2">
-                                  {formatTime(c.createdAt)}
+                                  {formatTime(c.createdAt.toString())}
                                 </p>
                               </div>
                               <p className="text-xs text-gray-700 mt-0.5 break-words">

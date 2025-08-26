@@ -48,7 +48,7 @@ type Comment = {
   authorName: string;
   authorEmail: string;
   authorImage?: string;
-  createdAt: string;
+  createdAt: Date;
 };
 
 const categoryColors: Record<string, string> = {
@@ -315,7 +315,9 @@ export default function TrendingIdeas() {
                             {c.authorName}
                           </p>
                           <p className="text-[10px] text-gray-400 whitespace-nowrap ml-2">
-                            {formatTime(c.createdAt)}
+                            <span className="text-[10px] text-gray-400 whitespace-nowrap ml-2">
+                              {formatTime(c.createdAt.toString())}
+                            </span>
                           </p>
                         </div>
                         <p className="text-xs text-gray-700 mt-0.5 break-words">
